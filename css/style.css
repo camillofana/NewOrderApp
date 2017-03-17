@@ -137,6 +137,17 @@ body {
        margin-right: 0;
    }
 }
+/* Custom Classes and ID =============*/
+
+.btn-info {
+  background-color: #45B7D3 !important;
+  border-color: none !important;
+}
+
+.orderlyblue { /* For materialize css */
+  background-color: #45B7D3 !important;
+}
+
 
 /*Base CSS 15 Mar 2017 ===============*/
 @import url(http://fonts.googleapis.com/css?family=Raleway);
