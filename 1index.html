@@ -33,11 +33,10 @@
 		<!-- Left panel with reveal effect -->
 		<div class="panel panel-left panel-reveal">
 			<div class="content-block">
-				<p><a href="#index" class="close-panel">HOME</a></p>
 				<p><a href="#detailsPage" class="close-panel">Products</a></p>
 				<p><a href="#">Providers</a></p>
-				<p><a href="#orders" class="close-panel">Orders</a></p>
-				<p><a href="#usersPage" class="close-panel">Users</a></p>
+				<p><a href="#">Orders</a></p>
+				<p><a href="#usersPage">Users</a></p>
 				<p><a href="#">Logout</a></p>
 			</div>
 		</div>
@@ -52,60 +51,25 @@
 							<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
 						</div>
 					</div>
-					<!-- product page navbar -->
+
 					<div class="navbar-inner cached" data-page="detailsPage">
 						<div class="left sliding">
 							<a href="index" class="link back">
 								<i class="icon icon-back"></i><span>Back</span>
 							</a>
 						</div>
-						<div class="center sliding">PRODUCT PAGE</div>
+						<div class="center sliding">Detail page</div>
 						<div class="right">
 							<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
 						</div>
 					</div>
-					<!-- END product page navbar -->
-					<!-- orders page navbar -->
-					<div class="navbar-inner cached" data-page="orders">
-
-						<div class="left sliding">
-							<a href="#" class="link close-popup">
-								<i class="icon icon-back"></i><span>Back</span>
-							</a>
-						</div>
-
-						<div class="center sliding">ORDERS LIST</div>
-						<div class="right">
-							<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
-						</div>
-					</div>
-					<!-- END orders page navbar -->
-					<!-- popup navbar -->
-					<div class="navbar-inner cached">
-						<div class="navbar-inner">
-							<div class="center" ng-repeat="Tdetail in Tdetails">
-								{{Tdetail.OrderNumber}}&nbsp;&nbsp;{{Tdetail.name | uppercase}}</div>
-							<div class="right">
-								<a href="#" class="link close-popup">Done</a>
-							</div>
-						</div>
-					</div>
-					<!-- END popup navbar -->
 				</div>
 
 				<!-- Pages -->
 				<div class="pages navbar-through toolbar-through">
-					<!-- Page 0 -->
-					<div data-page="index" class="page">
-						<!-- Page content-->
-						<div class="page-content">
-
-						</div>
-					</div>
-					<!-- End Page 0 -->
 
 					<!-- Page 1 -->
-					<div data-page="orders" class="page cached" ng-controller="IndexPageController">
+					<div data-page="index" class="page" ng-controller="IndexPageController">
 						<!-- Page content-->
 						<div class="page-content">
 
@@ -125,10 +89,7 @@
 									<ul ng-repeat="detail in details">
 										<li class="item-content">
 											<div class="item-inner">
-												<div class="item-title">
-													<a href="#" data-popup=".popup-about" class="open-popup" 
-														 ng-click="orderDetail(detail); orderDetailTitolo(detail)">{{detail.OrderNumber}}
-													</a></div>
+												<div class="item-title"><a href="#" data-popup=".popup-about" class="open-popup" ng-click="orderDetail(detail); orderDetailTitolo(detail)">{{detail.OrderNumber}}</a></div>
 												<div class="item-title">{{detail.name}}</div>
 												<div class="item-title">{{detail.sender}}</div>
 												<div class="item-title">{{detail.user_name}}</div>
@@ -138,49 +99,24 @@
 								</div>
 							</table>
 						</div>
-						<!-- About Popup --------------------------------------------
-<div class="popup demo-popup" style="display: none;">
-<div class="view navbar-fixed">
-<div class="pages">
-<div class="page">
-<div class="navbar">
-<div class="navbar-inner">
-<div class="center">Popup Title</div>
-<div class="right"><a href="#" class="link close-popup">Done</a></div>
-</div>
-</div>
-<div class="page-content">
-<div class="content-block">
-<p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- pppppppppppppppppppprrrrrrrrrovvvvaaaaaaaaaaaaaaaa-->
-						<div class="popup popup-about" style="display: none;">
-<!--
+						<!-- About Popup -->
+						<div class="popup popup-about" ng-controller="IndexPageController">
 							<div class="view navbar-fixed">
 								<div class="pages">
 									<div class="page">
 										<div class="navbar">
-											<div class="navbar-inner" style="display: none;">
-												<div class="center" ng-repeat="Tdetail in Tdetails">
-													{{Tdetail.OrderNumber}}&nbsp;&nbsp;{{Tdetail.name | uppercase}}</div>
+											<div class="navbar-inner">
+												<div class="center" ng-repeat="Tdetail in Tdetails">{{Tdetail.OrderNumber}}
+													&nbsp;{{Tdetail.name | uppercase}}</div>
 												<div class="right">
 													<a href="#" class="link close-popup">Done</a>
 												</div>
 											</div>
 										</div>
--->
 										<div class="page-content">
 											<div class="content-block">
 
 												<div ng-repeat="Tdetail in Tdetails">
-
-													<h3 class="pull-left" style="color: #5bc0de;" >Note:&nbsp;{{Tdetail.Comment}}
-													</h3>
 
 													<table class="table table-hover">
 														<tr >
@@ -195,16 +131,12 @@
 												</div>
 											</div>
 										</div>
-<!--
 									</div>
 								</div>
 							</div>
--->
 						</div>
-						<!-- End About Popup ------------------------------------------------>
 					</div>
 					<!-- End Page 1 -->
-
 					<!-- Page 2 -->
 					<div data-page="detailsPage" class="page cached" ng-controller="ProductPageController">
 						<!-- Page content-->
