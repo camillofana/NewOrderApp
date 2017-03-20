@@ -24,6 +24,7 @@
     <script type="text/javascript" src="js/service/InitService.js"></script>
     <script type="text/javascript" src="js/controller/IndexPageController.js"></script>
     <script type="text/javascript" src="js/controller/ProductPageController.js"></script>
+    <script type="text/javascript" src="js/controller/UserPageController.js"></script>
 
   </head>
   <body>
@@ -191,6 +192,30 @@
             </div>
           </div>
     <!-- End Page 2 -->
+            
+            <!-- Page 3 -->
+					<div data-page="usersPage" class="page cached" ng-controller="UserPageController">
+						<!-- Page content-->
+						<div class="page-content">
+							<!-- Start Products Page Angular content -->
+							<table class="table table-hover">
+								<tr>
+									<th>user_id</th>
+									<th>user_name</th>
+									<th>user_email</th>
+									<th>administrator</th>
+								</tr>
+								<tr ng-repeat="user in users">
+									<td>{{user.user_id}}</td>
+									<td>{{user.user_name}}</td>
+									<td>{{user.user_email}}</td>
+									<td>{{user.administrator}}</td>
+								</tr>
+							</table>
+							<!-- End Products Page Angular content -->
+						</div>
+					</div>
+					<!-- End Page 3 -->
 
         </div>
       </div>
