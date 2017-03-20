@@ -1,9 +1,9 @@
                       <div ng-controller="DbController">
                           <nav class="navbar navbar-default">
                             <div class="navbar-header">
-                              <div class="alert alert-default navbar-brand search-box">
+                              <!-- <div class="alert alert-default navbar-brand search-box">
                                 <button class="btn btn-primary" ng-show="show_form" ng-click="formToggle()">Add Order <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-                              </div>
+                              </div> -->
                               <div class="alert alert-default input-group search-box">
                                 <span class="input-group-btn">
                                   <input type="text" class="form-control" placeholder="Live search for product name, provide etc..." ng-model="search_query">
@@ -44,9 +44,9 @@
                             <td>{{detail.sender}}</td>
                             <td>{{detail.user_name}}</td>
                             <td>
-                              <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="glyphicon glyphicon-eye-open"></span></button>
-                              <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                              <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>
+                              <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
+                              <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
+                              <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
                             </td>
                           </tr>
                         </table>

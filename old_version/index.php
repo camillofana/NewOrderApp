@@ -30,6 +30,8 @@
 
     <!-- Custom Font Montserrat -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,19 +55,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>  Products</a>
+                    <a href="#"><span class="fa fa-cubes fa-lg" aria-hidden="true"></span>  Products</a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>  Providers</a>
+                    <a href="#"><span class="fa fa-truck fa-lg" aria-hidden="true"></span>  Providers</a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Orders</a>
+                    <a href="#"><span class="fa fa-shopping-cart fa-lg" aria-hidden="true"></span>  Orders</a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  User</a>
+                    <a href="#"><span class="fa fa-users fa-lg" aria-hidden="true"></span>  Users</a>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    <button type="button" class="btn btn-default"><span class="fa fa-sign-out fa-lg" aria-hidden="true"></span>
                         Logout
                     </button>
                 </li>
@@ -79,7 +81,7 @@
             <div class="container-fluid">
               <div class="navbar-header">
                 <button href="#menu-toggle" id="menu-toggle" type="button" class="btn btn-default navbar-btn pull-left">
-                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                  <span class="fa fa-bars fa-lg" aria-hidden="true"></span>
                 </button>
                 <h3 class="navbar-text">AngularJS CRUD Operations Demo</h3> <!-- Navbar title - replace with current section -->
               </div>
