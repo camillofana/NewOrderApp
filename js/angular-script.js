@@ -56,7 +56,7 @@ crudApp.controller("DbController",['$scope','$http', function($scope,$http){
         $scope.Odetails = data;
       });
     }
-	 																																 
+
 }]);
 
 
@@ -71,7 +71,7 @@ crudApp.controller("ProductController",['$scope','$http', function($scope,$http)
             $scope.details = data;
         });
     }
-    
+
     $scope.insertInfo = function(info){
         $http.post('databaseFiles/insertProduct.php',{"provider":info.provider,"email":info.email,"address":info.address,"gender":info.gender}).success(function(data){
             if (data == true) {
@@ -81,6 +81,5 @@ crudApp.controller("ProductController",['$scope','$http', function($scope,$http)
             }
         });
     }
-																														 
-}]);
 
+}]);

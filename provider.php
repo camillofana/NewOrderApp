@@ -14,7 +14,7 @@
                 <button href="#menu-toggle" id="menu-toggle" type="button" class="btn btn-default navbar-btn pull-left">
                   <span class="fa fa-bars fa-lg" aria-hidden="true"></span>
                 </button>
-                <h3 class="navbar-text text-center">DASHBOARD</h3> <!-- Navbar title - replace with current section -->
+                <h3 class="navbar-text text-center">PROVIDERS</h3> <!-- Navbar title - replace with current section -->
               </div>
             </div>
           </nav>

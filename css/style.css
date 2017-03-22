@@ -10,6 +10,10 @@ body {
    font-family: 'Montserrat', sans-serif; /*Font override to Montserrat*/
 }
 
+.login {
+  background-color: #45B7D3 !important;
+}
+
 /* Toggle Styles */
 
 #wrapper {
