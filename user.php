@@ -23,26 +23,32 @@
                     <div class="col-lg-12">
                       <?php include 'fab.php';?> <!-- Recall floating button -->
 
-                      <div ng-controller="UsersController">
-                        <!-- Page content-->
+                      <div class="list-group" ng-controller="UsersController">
+                        <a href="#" class="list-group-item" ng-repeat="user in users">
+                          <h4 class="list-group-item-heading">{{user.user_name}}</h4>
+                          <p class="list-group-item-text">{{user.user_email}}</p>
+                          <p class="list-group-item-text">Admin: {{user.administrator}}</p>
+                        </a>
+                      </div>
+
+                      <!-- <div ng-controller="UsersController">
+                        <!-- Page content
                         <div class="page-content">
-                          <!-- Start Products Page Angular content -->
+                          <!-- Start Products Page Angular content
                           <table class="table table-hover">
                             <tr>
-                              <th>user_id</th>
                               <th>user_name</th>
                               <th>user_email</th>
                               <th>administrator</th>
                             </tr>
                             <tr ng-repeat="user in users">
-                              <td>{{user.user_id}}</td>
                               <td>{{user.user_name}}</td>
                               <td>{{user.user_email}}</td>
                               <td>{{user.administrator}}</td>
                             </tr>
                           </table>
-                          <!-- End Products Page Angular content -->
-                        </div>
+                          <!-- End Products Page Angular content 
+                        </div> -->
                       </div>
 
                   </div>

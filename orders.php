@@ -84,19 +84,35 @@
                         </li>
                       </ul> -->
 
-                      <div class="list-group">
-                        <a href="#" class="list-group-item" ng-repeat="detail in details| filter:search_query">
-                          <div class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
-                            {{detail.OrderNumber}}
+                    <!--  <ul class="list-group">
+                        <li class=" list-group-item" ng-repeat="detail in details| filter:search_query">
+                          <div class="media-left">
+                            <a href="#">
+                              <span class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
+                                {{detail.OrderNumber}}
+                              </span>
+                            </a>
                           </div>
+                          <div class="media-body">
+                            <h4 class="media-heading">{{detail.name}}</h4>
+                            <p class="list-group-item-text">{{detail.user_name}}</p>
+                          </div>
+                        </li>
+                      </ul> -->
+
+                      <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="detail in details| filter:search_query" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
+                          <span class="badge btn btn-info">
+                            {{detail.OrderNumber}}
+                          </span>
                           <h4 class="list-group-item-heading">{{detail.name}}</h4>
                           <p class="list-group-item-text">{{detail.user_name}}</p>
                         </a>
                       </div>
 
-                      <div class="panel panel-default">
+                    <!-- <div class="panel panel-default">
 
-                        <!-- Table -->
+                        <!-- Table
                         <table class="table">
                           <thead>
                               <tr>
@@ -119,11 +135,11 @@
                                   <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
                                   <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
                                   <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
-                                </td> -->
+                                </td>
                               </tr>
                             </tbody>
                         </table>
-                      </div>
+                      </div> -->
 
                       <!-- Modal -->
                       <div id="myModal" class="modal fade" role="dialog">

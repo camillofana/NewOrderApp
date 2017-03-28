@@ -22,19 +22,25 @@
                 <div class="row">
                     <div class="col-lg-12">
                       <?php include 'fab.php';?> <!-- Recall floating button -->
-											
-											
-											  <!-- Start Providers Page Angular content -->
+
+                      <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="provider in providers">
+                          <h4 class="list-group-item-heading">{{provider.name}}</h4>
+                          <p class="list-group-item-text"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{provider.agent_name}}</p>
+                          <p class="list-group-item-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{provider.email}}</p>
+                          <p class="list-group-item-text"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> {{provider.phone}}</p>
+                        </a>
+                      </div>
+
+											  <!-- Start Providers Page Angular content 
                           <table class="table table-hover">
                             <tr>
-                              <th>id</th>
                               <th>name</th>
                               <th>email</th>
                               <th>phone</th>
 															<th>agent_name</th>
                             </tr>
                             <tr ng-repeat="provider in providers">
-                              <td>{{provider.id}}</td>
                               <td>{{provider.name}}</td>
                               <td>{{provider.email}}</td>
                               <td>{{provider.phone}}</td>
@@ -42,8 +48,8 @@
                             </tr>
                           </table>
                           <!-- End Providers Page Angular content -->
-											
-											
+
+
                   </div>
                 </div>
               </div>
