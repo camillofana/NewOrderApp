@@ -28,11 +28,10 @@
                               <!-- <div class="alert alert-default navbar-brand search-box">
                                 <button class="btn btn-primary" ng-show="show_form" ng-click="formToggle()">Add Order <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                               </div> -->
-                              <div class="alert alert-default input-group search-box">
+                              <div class="alert alert-default input-group search-box"></div>
                                 <span class="input-group-btn">
                                   <input type="text" class="form-control" placeholder="Live search for product name, provide etc..." ng-model="search_query">
                                 </span>
-                              </div>
                             </div>
                           </nav>
                           <div class="col-md-6 col-md-offset-3">
@@ -49,7 +48,7 @@
                       <div id="table_content"></div>
 
                       <!-- Table to show employee detalis -->
-                      <div class="table-responsive">
+                    <!--  <div class="table-responsive">
                         <table class="table table-hover">
                           <tr>
                             <th>ORDER ID</th>
@@ -73,6 +72,46 @@
                               <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
                             </td>
                           </tr>
+                        </table>
+                      </div> -->
+
+                      <!-- <ul class="list-group" ng-repeat="detail in details| filter:search_query">
+                        <li class="list-group-item">
+                          <p class="list-group-item-text" ng-click="orderDetail(detail)">{{detail.OrderNumber}}</p>
+                          <p class="list-group-item-text">{{detail.name}}</p>
+                          <p class="list-group-item-text">{{detail.sender}}</p>
+                          <p class="list-group-item-text">{{detail.user_name}}</p>
+                        </li>
+                      </ul> -->
+
+                      <div class="panel panel-default">
+
+                        <!-- Table -->
+                        <table class="table">
+                          <thead>
+                              <tr>
+                                <th>ORDER ID</th>
+                                <th>PROVIDER</th>
+                                <th>CREATOR</th>
+                                <th></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr ng-repeat="detail in details| filter:search_query">
+                                <td>
+                                  <div class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
+                                    {{detail.OrderNumber}}
+                                  </div>
+                                </td>
+                                <td>{{detail.name}}</td>
+                                <td>{{detail.user_name}}</td>
+                                <!-- <td>
+                                  <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
+                                  <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
+                                  <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
+                                </td> -->
+                              </tr>
+                            </tbody>
                         </table>
                       </div>
 

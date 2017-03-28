@@ -41,6 +41,15 @@
                         <div class="clearfix"></div>
                         <!-- Table to show order detalis -->
                         <div id="table_content"></div>
+
+                        <div class="list-group" ng-repeat="detail in details| filter:search_query" ng-switch="detail.hide">
+                          <a href="#" class="list-group-item">
+                            <h4 class="list-group-item-heading">{{detail.name}}</h4>
+                            <p class="list-group-item-text">{{detail.provider}}</p>
+                            <p class="list-group-item-text">Stored: {{detail.stored}} {{detail.unit}}</p>
+                          </a>
+                        </div>
+
                         <!-- Table to show employee detalis -->
                         <div class="table-responsive">
                           <table class="table table-hover">
