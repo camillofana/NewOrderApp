@@ -42,8 +42,8 @@
                         <!-- Table to show order detalis -->
                         <div id="table_content"></div>
 
-                        <div class="list-group" ng-repeat="detail in details| filter:search_query" ng-switch="detail.hide">
-                          <a href="#" class="list-group-item">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item" ng-repeat="detail in details| filter:search_query" ng-switch="detail.hide">
                             <h4 class="list-group-item-heading">{{detail.name}}</h4>
                             <p class="list-group-item-text">{{detail.provider}}</p>
                             <p class="list-group-item-text">Stored: {{detail.stored}} {{detail.unit}}</p>

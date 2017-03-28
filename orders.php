@@ -84,6 +84,16 @@
                         </li>
                       </ul> -->
 
+                      <div class="list-group">
+                        <a href="#" class="list-group-item" ng-repeat="detail in details| filter:search_query">
+                          <div class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
+                            {{detail.OrderNumber}}
+                          </div>
+                          <h4 class="list-group-item-heading">{{detail.name}}</h4>
+                          <p class="list-group-item-text">{{detail.user_name}}</p>
+                        </a>
+                      </div>
+
                       <div class="panel panel-default">
 
                         <!-- Table -->
@@ -127,24 +137,33 @@
                             </div>
                             <!-- Modal open -->
                             <div class="modal-body">
-                              <!-- Table to show employee detalis -->
-                            <div class="table-responsive">
-                                <table class="table table-hover">
+
+                              <div class="list-group">
+                                <a href="#" class="list-group-item" ng-repeat="Odetail in Odetails| filter:search_query">
+                                  <h4 class="list-group-item-heading">{{Odetail.name}}</h4>
+                                  <p class="list-group-item-text">Amount: {{Odetail.ammount}} {{Odetail.unit}}</p>
+                                </a>
+                              </div>
+
+                          <!--  <div class="table-responsive">
+                                <table class="table">
+                                  <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Product</th>
                                         <th>Amount</th>
                                         <th>Unit</th>
                                     </tr>
+                                  </thead>
+                                  <tbody>
                                     <tr ng-repeat="Odetail in Odetails| filter:search_query">
-                                        <td>{{Odetail.id}}</td>
                                         <td>{{Odetail.name}}</td>
                                         <td>{{Odetail.ammount}}</td>
                                         <td>{{Odetail.unit}}</td>
                                     </tr>
+                                  </tbody>
                                 </table>
-                            </div>
-                            </div>
+                            </div> -->
+                        </div>
                             <!-- Modal close -->
                           </div>
                         </div>
