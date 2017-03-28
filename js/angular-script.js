@@ -62,7 +62,7 @@ crudApp.controller("DbController",['$scope','$http', function($scope,$http){
 
 crudApp.controller("ProductController",['$scope','$http', function($scope,$http){
 
-    // Function to get employee details from the database
+    // Function to get Products details from the database
     getInfo();
     function getInfo(){
         // Sending request to EmpDetails.php files
@@ -79,6 +79,36 @@ crudApp.controller("ProductController",['$scope','$http', function($scope,$http)
             // Hide details insertion form
             $('#empForm').css('display', 'none');
             }
+        });
+    }
+
+}]);
+
+//USERS Page CTRL
+crudApp.controller("UsersController",['$scope','$http', function($scope,$http){
+
+    // Function to get Products details from the database
+    getInfo();
+    function getInfo(){
+        // Sending request to EmpDetails.php files
+        $http.post('DatabaseFiles/useList.php').success(function(data){
+            // Stored the returned data into scope
+            $scope.users = data;
+        });
+    }
+
+}]);
+
+//POVIDERS Page CTRL
+crudApp.controller("ProvidersController",['$scope','$http', function($scope,$http){
+
+    // Function to get Products details from the database
+    getInfo();
+    function getInfo(){
+        // Sending request to EmpDetails.php files
+        $http.post('DatabaseFiles/providersList.php').success(function(data){
+            // Stored the returned data into scope
+            $scope.providers = data;
         });
     }
 

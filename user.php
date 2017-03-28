@@ -23,7 +23,7 @@
                     <div class="col-lg-12">
                       <?php include 'fab.php';?> <!-- Recall floating button -->
 
-                      <div ng-controller="UserPageController">
+                      <div ng-controller="UsersController">
                         <!-- Page content-->
                         <div class="page-content">
                           <!-- Start Products Page Angular content -->

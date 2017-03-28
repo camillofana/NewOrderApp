@@ -18,10 +18,32 @@
               </div>
             </div>
           </nav>
-            <div class="container-fluid">
+            <div class="container-fluid" ng-controller="ProvidersController">
                 <div class="row">
                     <div class="col-lg-12">
                       <?php include 'fab.php';?> <!-- Recall floating button -->
+											
+											
+											  <!-- Start Providers Page Angular content -->
+                          <table class="table table-hover">
+                            <tr>
+                              <th>id</th>
+                              <th>name</th>
+                              <th>email</th>
+                              <th>phone</th>
+															<th>agent_name</th>
+                            </tr>
+                            <tr ng-repeat="provider in providers">
+                              <td>{{provider.id}}</td>
+                              <td>{{provider.name}}</td>
+                              <td>{{provider.email}}</td>
+                              <td>{{provider.phone}}</td>
+															 <td>{{provider.agent_name}}</td>
+                            </tr>
+                          </table>
+                          <!-- End Providers Page Angular content -->
+											
+											
                   </div>
                 </div>
               </div>
