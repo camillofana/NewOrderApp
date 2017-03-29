@@ -49,64 +49,6 @@
                             <p class="list-group-item-text">Stored: {{detail.stored}} {{detail.unit}}</p>
                           </a>
                         </div>
-
-                        <!-- Table to show employee detalis -->
-                        <div class="table-responsive">
-                          <table class="table table-hover">
-                            <tr>
-                              <!--<th>id</th>-->
-                              <th>NAME</th>
-                              <th>PROVIDER</th>
-                              <th>STORED</th>
-                              <th>UNIT</th>
-                              <!--
-                              <th>description</th>
-                              <th>pcode</th>
-                              <th>packageN</th>
-                              <th>Min Stored</th>
-                              <th>mode</th>
-                              <th>hide</th>
-                                        -->
-                            </tr>
-                                  <tr ng-repeat="detail in details| filter:search_query" ng-switch="detail.hide">
-                                  <!--<td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.id}}</td>-->
-                                    <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.provider}}</td>
-                                    <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.name}}</td>
-                                    <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.stored}}</td>
-                                    <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.unit}}</td>
-                                  <!--
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.description}}</td>
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.pcode}}</td>
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.packageN}}</td>
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.MinStored}}</td>
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.mode}}</td>
-                                  <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">{{detail.hide}}</td>
-                                  -->
-                                    <td ng-switch-when="h" style="background-color: #7f7f7f; color: #c1c1c1;">
-                                    <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                                    <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                  </td>
-
-                                  <!--<td ng-switch-default>{{detail.id}}</td>-->
-                                  <td ng-switch-default>{{detail.name}}</td>
-                                  <td ng-switch-default>{{detail.provider}}</td>
-                                  <td ng-switch-default>{{detail.stored}}</td>
-                                  <td ng-switch-default>{{detail.unit}}</td>
-                                  <!--
-                                  <td ng-switch-default>{{detail.description}}</td>
-                                  <td ng-switch-default>{{detail.pcode}}</td>
-                                  <td ng-switch-default>{{detail.packageN}}</td>
-                                  <td ng-switch-default>{{detail.MinStored}}</td>
-                                  <td ng-switch-default>{{detail.mode}}</td>
-                                  <td ng-switch-default>{{detail.hide}}</td>
-                                  -->
-                                <td ng-switch-default>
-                                  <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="glyphicon glyphicon-edit"></span></button>
-                                  <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
                         </div>
                       </div>
                     </div>

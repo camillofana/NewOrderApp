@@ -110,10 +110,10 @@
                         </a>
                       </div>
 
-                    <!-- <div class="panel panel-default">
+                     <div class="panel panel-default">
 
-                        <!-- Table
-                        <table class="table">
+
+                        <!-- <table class="table">
                           <thead>
                               <tr>
                                 <th>ORDER ID</th>
@@ -131,7 +131,7 @@
                                 </td>
                                 <td>{{detail.name}}</td>
                                 <td>{{detail.user_name}}</td>
-                                <!-- <td>
+                                 <td>
                                   <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
                                   <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
                                   <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>

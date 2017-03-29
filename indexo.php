@@ -22,6 +22,23 @@
                 <div class="row">
                     <div class="col-lg-12">
                       <?php include 'fab.php';?> <!-- Recall floating button -->
+
+                      <div class="list-group">
+                        <a href="#" class="list-group-item">
+                          <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Statistics</h4>
+                          <p class="list-group-item-text">Total products stored:</p>
+                          <p class="list-group-item-text">Total providers:</p>
+                          <p class="list-group-item-text">Last product created:</p>
+                        </a>
+                      </div>
+                      <div class="list-group">
+                        <a href="#" class="list-group-item">
+                          <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Your last order</h4>
+                          <p class="list-group-item-text">Sended to:</p>
+                          <p class="list-group-item-text">Details</p>
+                        </a>
+                      </div>
+
                   </div>
                 </div>
               </div>
