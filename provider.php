@@ -31,30 +31,11 @@
                           <p class="list-group-item-text"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> {{provider.phone}}</p>
                         </a>
                       </div>
-
-											  <!-- Start Providers Page Angular content 
-                          <table class="table table-hover">
-                            <tr>
-                              <th>name</th>
-                              <th>email</th>
-                              <th>phone</th>
-															<th>agent_name</th>
-                            </tr>
-                            <tr ng-repeat="provider in providers">
-                              <td>{{provider.name}}</td>
-                              <td>{{provider.email}}</td>
-                              <td>{{provider.phone}}</td>
-															 <td>{{provider.agent_name}}</td>
-                            </tr>
-                          </table>
-                          <!-- End Providers Page Angular content -->
-
-
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <!-- /#page-content-wrapper -->
+          <!-- /#page-content-wrapper -->
 
 <?php include 'footer.php';?>

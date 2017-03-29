@@ -34,7 +34,7 @@
                                 </span>
                             </div>
                           </nav>
-                          <div class="col-md-6 col-md-offset-3">
+                      <div class="col-md-6 col-md-offset-3">
 
                       <!-- Include form template which is used to insert data into database -->
                         <div ng-include src="'templates/form.html'"></div>
@@ -43,62 +43,6 @@
                         <div ng-include src="'templates/editForm.html'"></div>
                       </div>
                       <div class="clearfix"></div>
-
-                      <!-- Table to show order detalis -->
-                      <div id="table_content"></div>
-
-                      <!-- Table to show employee detalis -->
-                    <!--  <div class="table-responsive">
-                        <table class="table table-hover">
-                          <tr>
-                            <th>ORDER ID</th>
-                            <th>PROVIDER</th>
-                            <th>SENDER</th>
-                            <th>CREATOR</th>
-                            <th></th>
-                          </tr>
-                          <tr ng-repeat="detail in details| filter:search_query">
-                            <td>
-                              <div class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
-                                {{detail.OrderNumber}}
-                              </div>
-                            </td>
-                            <td>{{detail.name}}</td>
-                            <td>{{detail.sender}}</td>
-                            <td>{{detail.user_name}}</td>
-                            <td>
-                              <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
-                              <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
-                              <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
-                            </td>
-                          </tr>
-                        </table>
-                      </div> -->
-
-                      <!-- <ul class="list-group" ng-repeat="detail in details| filter:search_query">
-                        <li class="list-group-item">
-                          <p class="list-group-item-text" ng-click="orderDetail(detail)">{{detail.OrderNumber}}</p>
-                          <p class="list-group-item-text">{{detail.name}}</p>
-                          <p class="list-group-item-text">{{detail.sender}}</p>
-                          <p class="list-group-item-text">{{detail.user_name}}</p>
-                        </li>
-                      </ul> -->
-
-                    <!--  <ul class="list-group">
-                        <li class=" list-group-item" ng-repeat="detail in details| filter:search_query">
-                          <div class="media-left">
-                            <a href="#">
-                              <span class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
-                                {{detail.OrderNumber}}
-                              </span>
-                            </a>
-                          </div>
-                          <div class="media-body">
-                            <h4 class="media-heading">{{detail.name}}</h4>
-                            <p class="list-group-item-text">{{detail.user_name}}</p>
-                          </div>
-                        </li>
-                      </ul> -->
 
                       <div class="list-group">
                         <a href="#" class="list-group-item" ng-repeat="detail in details| filter:search_query" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
@@ -110,85 +54,33 @@
                         </a>
                       </div>
 
-                     <div class="panel panel-default">
-
-
-                        <!-- <table class="table">
-                          <thead>
-                              <tr>
-                                <th>ORDER ID</th>
-                                <th>PROVIDER</th>
-                                <th>CREATOR</th>
-                                <th></th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr ng-repeat="detail in details| filter:search_query">
-                                <td>
-                                  <div class="btn btn-info" ng-click="orderDetail(detail)" data-toggle="modal" data-target="#myModal">
-                                    {{detail.OrderNumber}}
-                                  </div>
-                                </td>
-                                <td>{{detail.name}}</td>
-                                <td>{{detail.user_name}}</td>
-                                 <td>
-                                  <button class="btn btn-info" ng-click="orderDetail(detail)" title="Detail"><span class="fa fa-eye fa-lg"></span></button>
-                                  <button class="btn btn-warning" ng-click="editInfo(detail)" title="Edit"><span class="fa fa-pencil fa-lg"></span></button>
-                                  <button class="btn btn-danger" ng-click="deleteInfo(detail)" title="Delete"><span class="fa fa-trash fa-lg"></span></button>
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                      </div> -->
-
                       <!-- Modal -->
                       <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
 
                           <!-- Modal content-->
-                          <div class="modal-content">
+                          <div class="modal-content" >
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal">&times;</button>
                               <h4 class="modal-title">Order details</h4>
                             </div>
                             <!-- Modal open -->
                             <div class="modal-body">
-
                               <div class="list-group">
-                                <a href="#" class="list-group-item" ng-repeat="Odetail in Odetails| filter:search_query">
+                                <a href="#" class="list-group-item" ng-repeat="Odetail in Odetails">
                                   <h4 class="list-group-item-heading">{{Odetail.name}}</h4>
                                   <p class="list-group-item-text">Amount: {{Odetail.ammount}} {{Odetail.unit}}</p>
                                 </a>
                               </div>
-
-                          <!--  <div class="table-responsive">
-                                <table class="table">
-                                  <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Amount</th>
-                                        <th>Unit</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr ng-repeat="Odetail in Odetails| filter:search_query">
-                                        <td>{{Odetail.name}}</td>
-                                        <td>{{Odetail.ammount}}</td>
-                                        <td>{{Odetail.unit}}</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                            </div> -->
-                        </div>
-                            <!-- Modal close -->
+                            </div>
                           </div>
+                          <!-- Modal content close -->
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-        <!-- /#page-content-wrapper -->
+          <!-- /#page-content-wrapper -->
 
 <?php include 'footer.php';?>
